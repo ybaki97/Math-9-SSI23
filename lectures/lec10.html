@@ -221,7 +221,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/ybaki97/Math-9-SSI23" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -238,7 +238,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lec10.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ybaki97/Math-9-SSI23/issues/new?title=Issue%20on%20page%20%2Flectures/lec10.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -397,11 +397,13 @@ document.write(`
 <section id="crash-course-in-binary">
 <h2>Crash Course in Binary<a class="headerlink" href="#crash-course-in-binary" title="Permalink to this headline">#</a></h2>
 <p>Someone give me a number between 100 and 1000 :) We are given the number 559! Notice, we are already comfortable with this idea:</p>
-<p>\begin{align}
-559 &amp;= 500 + 50 + 9 \
-&amp;= 5\cdot100 + 5\cdot10 + 9\cdot 1 \
+<p><span class="math notranslate nohighlight">\(
+\begin{align}
+559 &amp;= 500 + 50 + 9 \\
+&amp;= 5\cdot100 + 5\cdot10 + 9\cdot 1 \\
 &amp;= 5 \cdot 10^2 + 5 \cdot 10^1 + 9 \cdot 10^0
-\end{align}</p>
+\end{align}
+\)</span></p>
 <p>Notice, our normal counting system is base 10 (also called decimal). In base 10, we use powers of 10, and multiply them by digits <span class="math notranslate nohighlight">\(0, \dots, 9\)</span>.</p>
 <p>The same concept holds for binary, and really for any base. Let’s focus on binary. In binary, we have powers 2, and multiply them by digits 0 and 1.</p>
 <p>Using this idea, let’s try to convert 559 to binary. The process is we want to write 559 as a sum of powers of 2.</p>
@@ -529,11 +531,13 @@ document.write(`
 </div>
 </div>
 <p>Then we’re left with 1, which is <span class="math notranslate nohighlight">\(2^0\)</span>.</p>
-<p>We’ve shown the the following:
+<p>We’ve shown the the following:</p>
+<p><span class="math notranslate nohighlight">\(
 \begin{align}
-559 &amp;= 2^9 + 2^5 + 2^3 + 2^2 + 2^1 + 2^0 \
+559 &amp;= 2^9 + 2^5 + 2^3 + 2^2 + 2^1 + 2^0 \\
 &amp;= 1 \cdot 2^9 + 1 \cdot 2^5 + 1 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0
-\end{align}</p>
+\end{align}
+\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">9</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
@@ -547,10 +551,12 @@ document.write(`
 </div>
 </div>
 <p>Now, for each power of 2 that doesn’t appear in our expansion above, we fill the corresponding space with a 0.</p>
-<p>\begin{pmatrix}
-2^9 &amp; 2^8 &amp; 2^7 &amp; 2^6 &amp; 2^5 &amp; 2^4 &amp; 2^3 &amp; 2^2 &amp; 2^1 &amp; 2^0 \
+<p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+2^9 &amp; 2^8 &amp; 2^7 &amp; 2^6 &amp; 2^5 &amp; 2^4 &amp; 2^3 &amp; 2^2 &amp; 2^1 &amp; 2^0 \\
 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1
-\end{pmatrix}</p>
+\end{pmatrix}
+\)</span></p>
 <p>Let’s check that we converted correctly :)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -565,11 +571,13 @@ document.write(`
 </div>
 </div>
 <p>What about converting from binary to decimal? Luckily for us, this is a lot easier :) Consider the number 100011. The easiest way to do this is to start from right to left.</p>
-<p>\begin{align}
-100011 &amp;= 1 \cdot 2^0 + 1 \cdot 2^1 + 0 \cdot 2^2 + 0 \cdot 2^3 + 0 \cdot 2^4 + 1 \cdot 2^5. \
-&amp;= 1 + 2 + 32 \
+<p><span class="math notranslate nohighlight">\(
+\begin{align}
+100011 &amp;= 1 \cdot 2^0 + 1 \cdot 2^1 + 0 \cdot 2^2 + 0 \cdot 2^3 + 0 \cdot 2^4 + 1 \cdot 2^5. \\
+&amp;= 1 + 2 + 32 \\
 &amp;= 35.
-\end{align}</p>
+\end{align}
+\)</span></p>
 <p>Let’s check our work!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -955,15 +963,17 @@ linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 </div>
 <p>Recall also that we used <code class="docutils literal notranslate"><span class="pre">linspace</span></code> for plotting in MATLAB. We will also use it for plotting in our Matplotlib unit :)</p>
 <ul class="simple">
-<li><p>The <span class="math notranslate nohighlight">\(5 \times 5\)</span> matrix
-\begin{pmatrix}
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \
-2 &amp; 2 &amp; 2 &amp; 2 &amp; 2 \
-3 &amp; 3 &amp; 3 &amp; 3 &amp; 3 \
-4 &amp; 4 &amp; 4 &amp; 4 &amp; 4
-\end{pmatrix}</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(5 \times 5\)</span> matrix</p></li>
 </ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\
+2 &amp; 2 &amp; 2 &amp; 2 &amp; 2 \\
+3 &amp; 3 &amp; 3 &amp; 3 &amp; 3 \\
+4 &amp; 4 &amp; 4 &amp; 4 &amp; 4
+\end{pmatrix}
+\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
@@ -1068,12 +1078,14 @@ linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 </div>
 </div>
 <ul class="simple">
-<li><p>The <span class="math notranslate nohighlight">\(2 \times 5\)</span> matrix
-\begin{pmatrix}
-2 &amp; 5 &amp; 8 &amp; 11 &amp; 14 \
-17 &amp; 20 &amp; 23 &amp; 26 &amp; 29
-\end{pmatrix}</p></li>
+<li><p>The <span class="math notranslate nohighlight">\(2 \times 5\)</span> matrix</p></li>
 </ul>
+<p><span class="math notranslate nohighlight">\(
+\begin{pmatrix}
+2 &amp; 5 &amp; 8 &amp; 11 &amp; 14 \\
+17 &amp; 20 &amp; 23 &amp; 26 &amp; 29
+\end{pmatrix}
+\)</span></p>
 <p>I’ll show you two different ways of creating this array. The first method will be very similar to MATLAB. The second method will be using techniques unique to NumPy.</p>
 <p><strong>Method 1:</strong> We notice that the difference between consecutive elements is 3. We’ll use a for-loop to create this array. First, with a small mistake.</p>
 <div class="cell docutils container">
@@ -1346,7 +1358,7 @@ arange(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1, 30, 25, 35,  5, 22, 17,  3, 26,  2])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([37,  0, 18, 18, 30, 11, 33, 20, 15,  1])
 </pre></div>
 </div>
 </div>
@@ -1470,7 +1482,7 @@ randint(...) method of numpy.random.mtrand.RandomState instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([35, 34, 35, 33, 17, 11, 26, 24,  5, 31])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14, 19, 31, 13, 32,  3, 20, 35,  4, 23])
 </pre></div>
 </div>
 </div>
@@ -1594,7 +1606,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([35, 34, 35, 33, 17, 11, 26, 24,  5, 31])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14, 19, 31, 13, 32,  3, 20, 35,  4, 23])
 </pre></div>
 </div>
 </div>
@@ -1606,7 +1618,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([24, 31, 24, 31, 34])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([13, 23, 20, 23, 31])
 </pre></div>
 </div>
 </div>
@@ -1622,7 +1634,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6435657477763161
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8964276467189107
 </pre></div>
 </div>
 </div>
@@ -1720,7 +1732,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.950401232725651
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.98978580757364
 </pre></div>
 </div>
 </div>
@@ -1733,9 +1745,9 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 1.58570511,  1.54075488,  2.24620598,  3.4312139 ,  1.83879087],
-       [ 3.69148982,  1.38626441,  2.09160952,  1.47584137, -0.76019873],
-       [ 2.43761044,  0.4447202 ,  0.22666063,  2.68602801,  1.2773721 ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.53173248,  2.19808431,  3.84105823,  0.64528733,  2.47447053],
+       [-0.64820331,  0.81877341,  1.21556937,  0.3861501 ,  2.2250902 ],
+       [ 2.19542881,  2.13340999,  3.74628332,  0.8364731 ,  2.18713023]])
 </pre></div>
 </div>
 </div>
@@ -1747,7 +1759,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.7601987287005437
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.6482033078971491
 </pre></div>
 </div>
 </div>
@@ -1759,7 +1771,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.691489819472909
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.8410582287985697
 </pre></div>
 </div>
 </div>
@@ -1881,8 +1893,8 @@ normal(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.01504271, 2.18225354, 2.09167214, 2.00801571, 1.97448637,
-       1.98832891, 1.92056348, 1.88912761, 2.16936014, 2.10550172])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.97452315, 2.13807776, 1.89416406, 2.12427529, 2.05198324,
+       1.90808525, 1.90690965, 2.06360337, 2.06085949, 1.80970517])
 </pre></div>
 </div>
 </div>
