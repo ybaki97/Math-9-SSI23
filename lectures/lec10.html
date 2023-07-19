@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/lec10';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture 11: July 19th, 2023" href="lec11.html" />
     <link rel="prev" title="Python Homework #3" href="../homework/pyhw3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -167,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../homework/pyhw2.html">Python Homework #2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework/pyhw3.html">Python Homework #3</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 10: July 17th, 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec11.html">Lecture 11: July 19th, 2023</a></li>
 </ul>
 
     </div>
@@ -361,7 +363,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crash-course-in-binary">Crash Course in Binary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-a-joke">Now, a joke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-for-a-joke">Time for a joke</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">NumPy</a><ul class="nav section-nav flex-column">
@@ -591,8 +593,8 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="now-a-joke">
-<h3>Now, a joke<a class="headerlink" href="#now-a-joke" title="Permalink to this headline">#</a></h3>
+<section id="time-for-a-joke">
+<h3>Time for a joke<a class="headerlink" href="#time-for-a-joke" title="Permalink to this headline">#</a></h3>
 <p>Windows 8 came right before Windows 10. Everyone was wondering why they skipped Windows 9. They didn’t skip Windows 9, they just changed to base 9.</p>
 <p>In base 9, <span class="math notranslate nohighlight">\(10 = 9^1 + 0 = 9\)</span>.</p>
 <p>I like Jaqueline’s comment more: it’s because 789.</p>
@@ -1358,7 +1360,7 @@ arange(...)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([37,  0, 18, 18, 30, 11, 33, 20, 15,  1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([15, 22, 18, 37, 28,  6, 21, 29, 16, 36])
 </pre></div>
 </div>
 </div>
@@ -1482,7 +1484,7 @@ randint(...) method of numpy.random.mtrand.RandomState instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14, 19, 31, 13, 32,  3, 20, 35,  4, 23])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([32, 12, 10, 26, 13, 12,  1, 12, 12, 38])
 </pre></div>
 </div>
 </div>
@@ -1606,7 +1608,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14, 19, 31, 13, 32,  3, 20, 35,  4, 23])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([32, 12, 10, 26, 13, 12,  1, 12, 12, 38])
 </pre></div>
 </div>
 </div>
@@ -1618,7 +1620,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([13, 23, 20, 23, 31])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([38, 32, 13, 13, 10])
 </pre></div>
 </div>
 </div>
@@ -1634,7 +1636,7 @@ choice(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8964276467189107
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6184203064095314
 </pre></div>
 </div>
 </div>
@@ -1732,7 +1734,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.98978580757364
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.996453172542589
 </pre></div>
 </div>
 </div>
@@ -1745,9 +1747,9 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 3.53173248,  2.19808431,  3.84105823,  0.64528733,  2.47447053],
-       [-0.64820331,  0.81877341,  1.21556937,  0.3861501 ,  2.2250902 ],
-       [ 2.19542881,  2.13340999,  3.74628332,  0.8364731 ,  2.18713023]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.15273007,  2.20466749,  1.12803362,  2.79867537,  3.75561314],
+       [ 1.98411425,  3.32656477,  2.25433067,  2.59088265,  1.61215632],
+       [ 2.12496447,  3.72645362,  0.11732921,  0.52812169, -0.90808793]])
 </pre></div>
 </div>
 </div>
@@ -1759,7 +1761,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.6482033078971491
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.9080879300712821
 </pre></div>
 </div>
 </div>
@@ -1771,7 +1773,7 @@ random(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.8410582287985697
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7556131438995983
 </pre></div>
 </div>
 </div>
@@ -1893,8 +1895,8 @@ normal(...) method of numpy.random._generator.Generator instance
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.97452315, 2.13807776, 1.89416406, 2.12427529, 2.05198324,
-       1.90808525, 1.90690965, 2.06360337, 2.06085949, 1.80970517])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.87044958, 1.89293312, 1.96260003, 2.10656928, 1.88835368,
+       2.07197256, 1.9761085 , 1.96763245, 2.06475349, 1.9395599 ])
 </pre></div>
 </div>
 </div>
@@ -2327,6 +2329,15 @@ normal(...) method of numpy.random._generator.Generator instance
         <p class="prev-next-title">Python Homework #3</p>
       </div>
     </a>
+    <a class="right-next"
+       href="lec11.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 11: July 19th, 2023</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -2346,7 +2357,7 @@ normal(...) method of numpy.random._generator.Generator instance
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crash-course-in-binary">Crash Course in Binary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#now-a-joke">Now, a joke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-for-a-joke">Time for a joke</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">NumPy</a><ul class="nav section-nav flex-column">
