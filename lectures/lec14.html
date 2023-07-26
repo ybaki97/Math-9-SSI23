@@ -1,0 +1,1471 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lecture 14: July 26th, 2023 &#8212; Math 9, Summer Session I 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/lec14';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Creative Homework Instructions" href="../homework/lasthw.html" />
+    <link rel="prev" title="Lecture 13: July 24th, 2023" href="lec13.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/vapor.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/vapor.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    UC Irvine, Math 9, SSI 2023
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw1.html">Python Homework #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec8.html">Lecture 8: July 12th, 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec9.html">Lecture 9: July 14th, 2023</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 4</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw2.html">Python Homework #2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw3.html">Python Homework #3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec10.html">Lecture 10: July 17th, 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec11.html">Lecture 11: July 19th, 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec12.html">Lecture 12: July 21st, 2023</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 5</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/pyhw4.html">Python Homework #4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec13.html">Lecture 13: July 24th, 2023</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 14: July 26th, 2023</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/lasthw.html">Creative Homework Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/lasthw-temp.html">Creative Homework Template</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ybaki97/Math-9-SSI23" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ybaki97/Math-9-SSI23/issues/new?title=Issue%20on%20page%20%2Flectures/lec14.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/lec14.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 14: July 26th, 2023</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-colors">Setting colors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-an-image-from-scratch">Making an image from scratch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#swapping-color-channels">Swapping color channels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unique-colors">Unique colors</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-14-july-26th-2023">
+<h1>Lecture 14: July 26th, 2023<a class="headerlink" href="#lecture-14-july-26th-2023" title="Permalink to this headline">#</a></h1>
+<p><strong>Today:</strong></p>
+<ul class="simple">
+<li><p>A few end-of-session announcements</p></li>
+<li><p>More image processing!</p></li>
+</ul>
+<p><strong>Announcements:</strong></p>
+<ul class="simple">
+<li><p>Summer Session I is almost over! Hard to believe, huh? The next week or so will be a little hectic with deadlines, so it’s important to stay organized:</p>
+<ul>
+<li><p>Final creative homework due Wednesday, August 2nd at 11:59pm PDT. This is a hard deadline, so try to get it in as early as possible.</p></li>
+<li><p>Python Homework #4 due Wednesday, August 2nd at 11:59pm PDT. If you will be needing an extension on this assignment, put in your token request as soon as possible.</p></li>
+<li><p>More outcome quizzes will be released later today. I will set the deadline as next Wednesday. Instead of having new outcome quizzes released next Monday, how does it sound if I increase the number of attempts this week?</p></li>
+<li><p>Deadline for EO/GO revision will also be Wednesday, August 2nd at 11:59pm PDT.</p></li>
+</ul>
+</li>
+<li><p>Yasmeen will hold one last “lecture” on Monday, July 31st during our regular lecture time. I will not be presenting any new material, but feel free to use the time to work on assignments, ask questions, etc.</p></li>
+</ul>
+<section id="setting-colors">
+<h2>Setting colors<a class="headerlink" href="#setting-colors" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice, <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">Image</span></code> is sensitive to caps. If I try <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">image</span></code>, it will throw an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;ash-lake.jpg&quot;</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our goal for this section of the notes is to select a horizontal band from the image and change the color.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" src="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/160c47ce2424ae007bb59fa5feb90b816eadf0afceb84902b2e631dfe39a22de.png" src="../_images/160c47ce2424ae007bb59fa5feb90b816eadf0afceb84902b2e631dfe39a22de.png" />
+</div>
+</div>
+<p>As a reminder, this is how we can slice our array and then view the corresponding part of the image. We will be changing this portion of the image to different colors.</p>
+<p>Like usual, we’ll try something that gives an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="ne">ValueError</span>: assignment destination is read-only
+</pre></div>
+</div>
+</div>
+</div>
+<p>What’s happening here is that python is telling us that we can’t directly edit the image. PIL and NumPy are both very good at storing data without taking up too much space (we’ll see this in just a moment). Here, both <code class="docutils literal notranslate"><span class="pre">arr</span></code> and <code class="docutils literal notranslate"><span class="pre">img</span></code> point to the image in memory, they don’t actually store the image.</p>
+<p>Here is the easy fix for this!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s get the size of <code class="docutils literal notranslate"><span class="pre">img</span></code>,<code class="docutils literal notranslate"><span class="pre">arr</span></code>, and <code class="docutils literal notranslate"><span class="pre">B</span></code> to see in more detail what’s going on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#returns size in bytes</span>
+<span class="c1">#this is tiny!</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#slightly bigger than img, </span>
+<span class="c1">#but still really small!</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>144
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>691344
+</pre></div>
+</div>
+</div>
+</div>
+<p>The trade-off here is that <code class="docutils literal notranslate"><span class="pre">B</span></code> is much larger, but now is something that we can edit!</p>
+<p>Notice the use of broadcasting. Each color channel gets changed to 0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/96d714e802d29497edad4bcc62be114f8e067a0e845bae42305a605ed917166d.png" src="../_images/96d714e802d29497edad4bcc62be114f8e067a0e845bae42305a605ed917166d.png" />
+</div>
+</div>
+<p>Let’s try changing this band to white instead.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4391762302a9b6fdcec007caac5970f0da5e59d3659ecfbf8fe3d12607fb1e8f.png" src="../_images/4391762302a9b6fdcec007caac5970f0da5e59d3659ecfbf8fe3d12607fb1e8f.png" />
+</div>
+</div>
+<p>What if I wanted to change this horizontal band to a color that wasn’t the same in every channel? Let’s start by changing to the color in the top left corner.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 83, 161, 148], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, 480, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">148</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d5634c9a1bf0b453ca2ede5e9b38876d0fc94d5a550a56a91df520619b91e423.png" src="../_images/d5634c9a1bf0b453ca2ede5e9b38876d0fc94d5a550a56a91df520619b91e423.png" />
+</div>
+</div>
+<p>Here, we picked another color randomly from <a class="reference external" href="https://coolors.co/">this link</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newcolors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">219</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">99</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">150</span><span class="p">:</span><span class="mi">200</span><span class="p">]</span> <span class="o">=</span> <span class="n">newcolors</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/fd351ee587c9901b451c74e445a4927299fafb9c350929ea5bf49e8cecdc246f.png" src="../_images/fd351ee587c9901b451c74e445a4927299fafb9c350929ea5bf49e8cecdc246f.png" />
+</div>
+</div>
+</section>
+<section id="making-an-image-from-scratch">
+<h2>Making an image from scratch<a class="headerlink" href="#making-an-image-from-scratch" title="Permalink to this headline">#</a></h2>
+<p><strong>Idea:</strong> Start with a NumPy array of RGB values and then turn that into an image. We can pick some colors from the generator :) As usual, we’ll start with a small mistake.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2 pixel by 2 pixel image</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">155</span><span class="p">],[</span><span class="mi">157</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">163</span><span class="p">]],[[</span><span class="mi">245</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">239</span><span class="p">],[</span><span class="mi">232</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">117</span><span class="p">]]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/opt/miniconda3/envs/math9/lib/python3.9/site-packages/PIL/Image.py:2953,</span> in <span class="ni">fromarray</span><span class="nt">(obj, mode)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2952</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2953</span>     <span class="n">mode</span><span class="p">,</span> <span class="n">rawmode</span> <span class="o">=</span> <span class="n">_fromarray_typemap</span><span class="p">[</span><span class="n">typekey</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2954</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>: ((1, 1, 3), &#39;&lt;i8&#39;)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [26],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/math9/lib/python3.9/site-packages/PIL/Image.py:2955,</span> in <span class="ni">fromarray</span><span class="nt">(obj, mode)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2953</span>         <span class="n">mode</span><span class="p">,</span> <span class="n">rawmode</span> <span class="o">=</span> <span class="n">_fromarray_typemap</span><span class="p">[</span><span class="n">typekey</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2954</span>     <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2955</span>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Cannot handle this data type: </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">typekey</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<span class="g g-Whitespace">   </span><span class="mi">2956</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2957</span>     <span class="n">rawmode</span> <span class="o">=</span> <span class="n">mode</span>
+
+<span class="ne">TypeError</span>: Cannot handle this data type: (1, 1, 3), &lt;i8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall from the previous section that the data type of our RGB values were <code class="docutils literal notranslate"><span class="pre">uint8</span></code>. This stands for unsigned (meaning non-negative) 8-bit integers. We use 8-bit integers because there are <span class="math notranslate nohighlight">\(256 = 2^8\)</span> possibilities for each color channel.</p>
+<p>To fix this, I just specify to use this data type when I create <code class="docutils literal notranslate"><span class="pre">arr</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2 pixel by 2 pixel image</span>
+<span class="n">color1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">155</span><span class="p">]</span>
+<span class="n">color2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">157</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">163</span><span class="p">]</span>
+<span class="n">color3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">245</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">239</span><span class="p">]</span>
+<span class="n">color4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">232</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">117</span><span class="p">]</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">color1</span><span class="p">,</span><span class="n">color2</span><span class="p">],[</span><span class="n">color3</span><span class="p">,</span><span class="n">color4</span><span class="p">]],</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/aa2c4ec9fc3ae205e933dbabfd3b7773637c51785dcbd7126ecea90161ab5ac3.png" src="../_images/aa2c4ec9fc3ae205e933dbabfd3b7773637c51785dcbd7126ecea90161ab5ac3.png" />
+</div>
+</div>
+<p>Now, this ran without an error, but the resulting image is too small to see! We can fix this by resizing the image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" src="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" />
+</div>
+</div>
+<p>Here, the image is being blended together. This isn’t quite what I wanted. Let’s see how to fix this!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method resize in module PIL.Image:
+
+resize(size, resample=None, box=None, reducing_gap=None) method of PIL.Image.Image instance
+    Returns a resized copy of this image.
+    
+    :param size: The requested size in pixels, as a 2-tuple:
+       (width, height).
+    :param resample: An optional resampling filter.  This can be
+       one of :py:data:`PIL.Image.Resampling.NEAREST`,
+       :py:data:`PIL.Image.Resampling.BOX`,
+       :py:data:`PIL.Image.Resampling.BILINEAR`,
+       :py:data:`PIL.Image.Resampling.HAMMING`,
+       :py:data:`PIL.Image.Resampling.BICUBIC` or
+       :py:data:`PIL.Image.Resampling.LANCZOS`.
+       If the image has mode &quot;1&quot; or &quot;P&quot;, it is always set to
+       :py:data:`PIL.Image.Resampling.NEAREST`.
+       If the image mode specifies a number of bits, such as &quot;I;16&quot;, then the
+       default filter is :py:data:`PIL.Image.Resampling.NEAREST`.
+       Otherwise, the default filter is
+       :py:data:`PIL.Image.Resampling.BICUBIC`. See: :ref:`concept-filters`.
+    :param box: An optional 4-tuple of floats providing
+       the source image region to be scaled.
+       The values must be within (0, 0, width, height) rectangle.
+       If omitted or None, the entire source is used.
+    :param reducing_gap: Apply optimization by resizing the image
+       in two steps. First, reducing the image by integer times
+       using :py:meth:`~PIL.Image.Image.reduce`.
+       Second, resizing using regular resampling. The last step
+       changes size no less than by ``reducing_gap`` times.
+       ``reducing_gap`` may be None (no first step is performed)
+       or should be greater than 1.0. The bigger ``reducing_gap``,
+       the closer the result to the fair resampling.
+       The smaller ``reducing_gap``, the faster resizing.
+       With ``reducing_gap`` greater or equal to 3.0, the result is
+       indistinguishable from fair resampling in most cases.
+       The default value is None (no optimization).
+    :returns: An :py:class:`~PIL.Image.Image` object.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s look at the possible resampling options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;BICUBIC&#39;,
+ &#39;BILINEAR&#39;,
+ &#39;BOX&#39;,
+ &#39;HAMMING&#39;,
+ &#39;LANCZOS&#39;,
+ &#39;NEAREST&#39;,
+ &#39;__class__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__members__&#39;,
+ &#39;__module__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to ignore the ones starting with <code class="docutils literal notranslate"><span class="pre">__</span></code>, but everything else is a resampling option for us.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BICUBIC
+BILINEAR
+BOX
+HAMMING
+LANCZOS
+NEAREST
+</pre></div>
+</div>
+</div>
+</div>
+<p>For some reason, the number of things that show up on your end may include much, much more than I have. In that case, here is how we should do this portion of the lecture.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BICUBIC
+BILINEAR
+BOX
+HAMMING
+LANCZOS
+NEAREST
+</pre></div>
+</div>
+</div>
+</div>
+<p>What I will do next is view my image with each of these resampling options applied. Like usual, we’ll make a mistake first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">resample</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BICUBIC
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [35],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span><span class="n">resample</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="o">.</span><span class="n">s</span><span class="p">))</span>
+
+<span class="nn">File ~/opt/miniconda3/envs/math9/lib/python3.9/enum.py:429,</span> in <span class="ni">EnumMeta.__getattr__</span><span class="nt">(cls, name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">427</span>     <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_member_map_</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">429</span>     <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+<span class="ne">AttributeError</span>: s
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll see two different ways to get around this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">getattr</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">,</span><span class="s2">&quot;BOX&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Resampling.BOX: 4&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">getattr</span></code> above is the same as us passing <code class="docutils literal notranslate"><span class="pre">Image.Resampling.Box</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">size_tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">newattr</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">size_tup</span><span class="p">,</span><span class="n">resample</span><span class="o">=</span><span class="n">newattr</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BICUBIC
+</pre></div>
+</div>
+<img alt="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" src="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BILINEAR
+</pre></div>
+</div>
+<img alt="../_images/2cf3e8cce020bd36a33dca7609310961660a0f632ca868a5a125b92668f39d45.png" src="../_images/2cf3e8cce020bd36a33dca7609310961660a0f632ca868a5a125b92668f39d45.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOX
+</pre></div>
+</div>
+<img alt="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" src="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HAMMING
+</pre></div>
+</div>
+<img alt="../_images/ff5a7c344c64e441e4e881fc1fc3802f57f7ef7f4b8ad8a03eed8e2e520e2f48.png" src="../_images/ff5a7c344c64e441e4e881fc1fc3802f57f7ef7f4b8ad8a03eed8e2e520e2f48.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LANCZOS
+</pre></div>
+</div>
+<img alt="../_images/22ed6ff60783f90d30bc3a0080b84d28448257bc2dc3b25501db9dfb4144062d.png" src="../_images/22ed6ff60783f90d30bc3a0080b84d28448257bc2dc3b25501db9dfb4144062d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NEAREST
+</pre></div>
+</div>
+<img alt="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" src="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" />
+</div>
+</div>
+<p>Here is another, less flexible, method. It gives the same output.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">size_tup</span><span class="p">,</span><span class="n">resample</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">Resampling</span><span class="p">[</span><span class="n">s</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BICUBIC
+</pre></div>
+</div>
+<img alt="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" src="../_images/effab3a3f68caa08a961100a2ebe9b4eda75f7932b42f6a7ce72b6f3c23a78f2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BILINEAR
+</pre></div>
+</div>
+<img alt="../_images/2cf3e8cce020bd36a33dca7609310961660a0f632ca868a5a125b92668f39d45.png" src="../_images/2cf3e8cce020bd36a33dca7609310961660a0f632ca868a5a125b92668f39d45.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOX
+</pre></div>
+</div>
+<img alt="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" src="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HAMMING
+</pre></div>
+</div>
+<img alt="../_images/ff5a7c344c64e441e4e881fc1fc3802f57f7ef7f4b8ad8a03eed8e2e520e2f48.png" src="../_images/ff5a7c344c64e441e4e881fc1fc3802f57f7ef7f4b8ad8a03eed8e2e520e2f48.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LANCZOS
+</pre></div>
+</div>
+<img alt="../_images/22ed6ff60783f90d30bc3a0080b84d28448257bc2dc3b25501db9dfb4144062d.png" src="../_images/22ed6ff60783f90d30bc3a0080b84d28448257bc2dc3b25501db9dfb4144062d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NEAREST
+</pre></div>
+</div>
+<img alt="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" src="../_images/9dc66cfbe0db86adf93b1249b22d875e50915f8c36bd0a1976c95f7bdc52df35.png" />
+</div>
+</div>
+</section>
+<section id="swapping-color-channels">
+<h2>Swapping color channels<a class="headerlink" href="#swapping-color-channels" title="Permalink to this headline">#</a></h2>
+<p><strong>Goal:</strong> Use our ash-lake image and swap all of the red channels with the blue channels.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;ash-lake.jpg&quot;</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[ 83, 161, 148],
+        [ 83, 161, 148],
+        [ 83, 161, 148],
+        ...,
+        [ 94, 157, 140],
+        [ 94, 157, 140],
+        [ 94, 157, 140]],
+
+       [[ 83, 161, 148],
+        [ 83, 161, 148],
+        [ 83, 161, 148],
+        ...,
+        [ 93, 156, 139],
+        [ 93, 156, 139],
+        [ 93, 156, 139]],
+
+       [[ 83, 161, 148],
+        [ 83, 161, 148],
+        [ 83, 161, 148],
+        ...,
+        [ 93, 156, 139],
+        [ 92, 155, 138],
+        [ 92, 155, 138]],
+
+       ...,
+
+       [[117, 128, 120],
+        [140, 151, 143],
+        [152, 163, 155],
+        ...,
+        [113, 126, 119],
+        [117, 130, 123],
+        [121, 134, 127]],
+
+       [[128, 139, 131],
+        [129, 140, 132],
+        [124, 135, 127],
+        ...,
+        [112, 125, 118],
+        [114, 127, 120],
+        [116, 129, 122]],
+
+       [[130, 141, 133],
+        [118, 129, 121],
+        [105, 117, 107],
+        ...,
+        [119, 132, 125],
+        [120, 133, 126],
+        [121, 134, 127]]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like usual, we’ll start by solving an easier problem. Let’s say I wanted to swap Red and Blue for mylist.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">83</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">148</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first thing we’ll do is try a way that might make sense when you’re first learning to program, but will have a mistake.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mylist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[148, 161, 148]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice, what happens is that <code class="docutils literal notranslate"><span class="pre">mylist[0]</span></code> gets changed to <code class="docutils literal notranslate"><span class="pre">mylist[2]</span></code>. By the time we want to change <code class="docutils literal notranslate"><span class="pre">mylist[2]</span></code>, the old value of <code class="docutils literal notranslate"><span class="pre">mylist[0]</span></code> is already gone.</p>
+<p>We’ll get around this problem by storing the original value of <code class="docutils literal notranslate"><span class="pre">mylist[0]</span></code> is a different variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">83</span><span class="p">,</span><span class="mi">161</span><span class="p">,</span><span class="mi">148</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mylist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[148, 161, 83]
+</pre></div>
+</div>
+</div>
+</div>
+<p>What we’ll do now is apply this idea to all of <code class="docutils literal notranslate"><span class="pre">arr</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">B</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">B</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([148, 161, 148], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice, we have the same issue as before! The values didn’t get swapped.</p>
+<p>Recall: <code class="docutils literal notranslate"><span class="pre">temp</span></code> represents all of the red values in the image. If we check the size, this seems way too small.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">temp</span></code> is not actually storing <code class="docutils literal notranslate"><span class="pre">B[:,:,0]</span></code>, it’s pointing to it in memory. Thus, when <code class="docutils literal notranslate"><span class="pre">B[:,:,0]</span></code> gets changed, <code class="docutils literal notranslate"><span class="pre">temp</span></code> gets changed as well.</p>
+<p>Here’s how I could actually get what I want:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">B</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">B</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([148, 161,  83], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Recall, I cannot change <code class="docutils literal notranslate"><span class="pre">arr</span></code> unless I make a copy. We can use this to our advantage here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">B</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([148, 161,  83], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see what the image looks like! First, the original.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" src="../_images/f178e33d9d0c70625874ee8c462a9300c1f9f4f1c9179cef2c7cc71775663ea7.png" />
+</div>
+</div>
+<p>Now, Red swapped with Blue.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/13eb61343a2bd3051f6cb91a4233cbc74f6ec504492fde217beb776725e69fcb.png" src="../_images/13eb61343a2bd3051f6cb91a4233cbc74f6ec504492fde217beb776725e69fcb.png" />
+</div>
+</div>
+<p>For fun, let’s swap Red with Green.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">C</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">C</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e09caef5584caa88ac429a24f6bac32b0a7c9bed046996a06612745b52f26f47.png" src="../_images/e09caef5584caa88ac429a24f6bac32b0a7c9bed046996a06612745b52f26f47.png" />
+</div>
+</div>
+<p>Vaporwave Ash Lake.</p>
+</section>
+<section id="unique-colors">
+<h2>Unique colors<a class="headerlink" href="#unique-colors" title="Permalink to this headline">#</a></h2>
+<p><strong>Goal:</strong> Figure out how many unique colors are in this image. Then figure out the indices where the colors change.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;images/barbie-grid.png&quot;</span><span class="p">)</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3bedd8cff54ea2c766e7a18f937bed7d68e1c635d66b99af16dee3602895aba0.png" src="../_images/3bedd8cff54ea2c766e7a18f937bed7d68e1c635d66b99af16dee3602895aba0.png" />
+</div>
+</div>
+<p>Just looking at this image, you would guess that there are three colors. You would be correct in this case, but that is because I worked very hard to make it that way. Notice how jagged the text is. This is due to something called aliasing. If I want to remove the jagged edges, I can use something called anti-aliasing. What this does is instead of keeping the exact pixel values, it shifts them just a little bit to make the color transitions more smooth. (Think of the resampling that we did in the previous portion of lecture.)</p>
+<p>How many unique colors are there?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1000, 1000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 12, 123, 180, 211, 237, 249, 255], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If I just call <code class="docutils literal notranslate"><span class="pre">np.unique(arr)</span></code>, it looks at a flattened <code class="docutils literal notranslate"><span class="pre">arr</span></code> and sees all of the numbers that appear. It then picks each unique number.</p>
+<p>However, for this question, I’m more interested in how many unique RGB triples there are.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice, each row of B represents an RGB triple that shows up in the image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[249, 180, 237],
+       [249, 180, 237],
+       [249, 180, 237],
+       ...,
+       [249, 180, 237],
+       [249, 180, 237],
+       [249, 180, 237]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1000000, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice if I call <code class="docutils literal notranslate"><span class="pre">np.unique(B)</span></code>, I’m still getting the same issue from before.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 12, 123, 180, 211, 237, 249, 255], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This gives the unique RGB triples that show up in the image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[211,  12, 123],
+       [249, 180, 237],
+       [255, 255, 255]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lec13.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 13: July 24th, 2023</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../homework/lasthw.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Creative Homework Instructions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-colors">Setting colors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-an-image-from-scratch">Making an image from scratch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#swapping-color-channels">Swapping color channels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unique-colors">Unique colors</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Christopher Davis and Yasmeen Baki
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -142,8 +142,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/swapped-ash.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/swapped-ash.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/vapor.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/vapor.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -175,6 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../homework/pyhw4.html">Python Homework #4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lec13.html">Lecture 13: July 24th, 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lec14.html">Lecture 14: July 26th, 2023</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 6</span></p>
 <ul class="nav bd-sidenav">
@@ -381,6 +382,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-functions">lambda functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-a-numpy-array">Formatting a NumPy array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-introduction-to-newton-s-method">Mathematical introduction to Newton’s method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appyling-at-a-good-point">Appyling at a good point</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-at-a-worse-point">Applying at a worse point</a></li>
@@ -2097,26 +2099,26 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;B&#39;, &#39;e&#39;, &#39;s&#39;],
-       [&#39;f&#39;, &#39;D&#39;, &#39;d&#39;],
-       [&#39;N&#39;, &#39;e&#39;, &#39;i&#39;],
-       [&#39;X&#39;, &#39;t&#39;, &#39;P&#39;],
-       [&#39;R&#39;, &#39;F&#39;, &#39;w&#39;],
-       [&#39;R&#39;, &#39;G&#39;, &#39;H&#39;],
-       [&#39;R&#39;, &#39;E&#39;, &#39;W&#39;],
-       [&#39;O&#39;, &#39;L&#39;, &#39;Z&#39;],
-       [&#39;e&#39;, &#39;u&#39;, &#39;N&#39;],
-       [&#39;T&#39;, &#39;S&#39;, &#39;n&#39;],
-       [&#39;J&#39;, &#39;y&#39;, &#39;O&#39;],
-       [&#39;J&#39;, &#39;U&#39;, &#39;B&#39;],
-       [&#39;M&#39;, &#39;g&#39;, &#39;I&#39;],
-       [&#39;y&#39;, &#39;P&#39;, &#39;p&#39;],
-       [&#39;L&#39;, &#39;v&#39;, &#39;M&#39;],
-       [&#39;V&#39;, &#39;g&#39;, &#39;q&#39;],
-       [&#39;l&#39;, &#39;l&#39;, &#39;E&#39;],
-       [&#39;L&#39;, &#39;W&#39;, &#39;o&#39;],
-       [&#39;z&#39;, &#39;z&#39;, &#39;J&#39;],
-       [&#39;C&#39;, &#39;U&#39;, &#39;V&#39;]], dtype=&#39;&lt;U1&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;V&#39;, &#39;O&#39;, &#39;n&#39;],
+       [&#39;y&#39;, &#39;x&#39;, &#39;j&#39;],
+       [&#39;B&#39;, &#39;t&#39;, &#39;J&#39;],
+       [&#39;u&#39;, &#39;C&#39;, &#39;C&#39;],
+       [&#39;N&#39;, &#39;b&#39;, &#39;u&#39;],
+       [&#39;q&#39;, &#39;k&#39;, &#39;j&#39;],
+       [&#39;B&#39;, &#39;I&#39;, &#39;g&#39;],
+       [&#39;H&#39;, &#39;K&#39;, &#39;s&#39;],
+       [&#39;L&#39;, &#39;j&#39;, &#39;x&#39;],
+       [&#39;z&#39;, &#39;G&#39;, &#39;o&#39;],
+       [&#39;U&#39;, &#39;R&#39;, &#39;t&#39;],
+       [&#39;B&#39;, &#39;y&#39;, &#39;s&#39;],
+       [&#39;u&#39;, &#39;N&#39;, &#39;f&#39;],
+       [&#39;y&#39;, &#39;M&#39;, &#39;U&#39;],
+       [&#39;L&#39;, &#39;P&#39;, &#39;E&#39;],
+       [&#39;E&#39;, &#39;T&#39;, &#39;M&#39;],
+       [&#39;i&#39;, &#39;N&#39;, &#39;F&#39;],
+       [&#39;W&#39;, &#39;d&#39;, &#39;N&#39;],
+       [&#39;b&#39;, &#39;R&#39;, &#39;j&#39;],
+       [&#39;y&#39;, &#39;M&#39;, &#39;q&#39;]], dtype=&#39;&lt;U1&#39;)
 </pre></div>
 </div>
 </div>
@@ -2129,7 +2131,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Nei&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;BtJ&#39;
 </pre></div>
 </div>
 </div>
@@ -2142,9 +2144,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Bes&#39;, &#39;fDd&#39;, &#39;Nei&#39;, &#39;XtP&#39;, &#39;RFw&#39;, &#39;RGH&#39;, &#39;REW&#39;, &#39;OLZ&#39;, &#39;euN&#39;,
-       &#39;TSn&#39;, &#39;JyO&#39;, &#39;JUB&#39;, &#39;MgI&#39;, &#39;yPp&#39;, &#39;LvM&#39;, &#39;Vgq&#39;, &#39;llE&#39;, &#39;LWo&#39;,
-       &#39;zzJ&#39;, &#39;CUV&#39;], dtype=&#39;&lt;U3&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;VOn&#39;, &#39;yxj&#39;, &#39;BtJ&#39;, &#39;uCC&#39;, &#39;Nbu&#39;, &#39;qkj&#39;, &#39;BIg&#39;, &#39;HKs&#39;, &#39;Ljx&#39;,
+       &#39;zGo&#39;, &#39;URt&#39;, &#39;Bys&#39;, &#39;uNf&#39;, &#39;yMU&#39;, &#39;LPE&#39;, &#39;ETM&#39;, &#39;iNF&#39;, &#39;WdN&#39;,
+       &#39;bRj&#39;, &#39;yMq&#39;], dtype=&#39;&lt;U3&#39;)
 </pre></div>
 </div>
 </div>
@@ -2497,6 +2499,95 @@ set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None,
 </div>
 <p>Run <code class="docutils literal notranslate"><span class="pre">arr</span></code> one last time and see the difference. Not too bad :)</p>
 </section>
+<section id="matplotlib">
+<h2>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">#</a></h2>
+<p>We didn’t have time to go over this content in lecture, but here are the videos that you can review on your own. It is not material that is crucial to outcome quizzes or homework, so I don’t feel too bad about skipping it in lecture :)</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/iV9BA42rA-w&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/iV9BA42rA-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/Dwg9RcC55xc&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/Dwg9RcC55xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/nw2jwKVpMy8&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/nw2jwKVpMy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/jGnNg21OW5k&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/jGnNg21OW5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/3d8ahlcQhRY&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;YouTube video player&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/3d8ahlcQhRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div></div>
+</div>
+</section>
 <section id="mathematical-introduction-to-newton-s-method">
 <h2>Mathematical introduction to Newton’s method<a class="headerlink" href="#mathematical-introduction-to-newton-s-method" title="Permalink to this headline">#</a></h2>
 <p>In this portion of the lecture, we went through a derivation of the formula for Newton’s method, and saw a few examples on Desmos. <a class="reference external" href="https://www.desmos.com/calculator/dqzmictzsv">Here is the link to the Desmos example</a>. Toggle the functions/points on and off to recreate how we traced through the problem in lecture.</p>
@@ -2699,6 +2790,7 @@ set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None,
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lambda-functions">lambda functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-a-numpy-array">Formatting a NumPy array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-introduction-to-newton-s-method">Mathematical introduction to Newton’s method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appyling-at-a-good-point">Appyling at a good point</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-at-a-worse-point">Applying at a worse point</a></li>
